@@ -5,17 +5,17 @@ import java.util.List;
 
 /**
  * @author huisheng.jin
- * @date 2020/11/22.
+ * @date 2020/11/24.
  */
 public class PrimeFactor {
     public static List<Integer> parse(int number) {
-        List<Integer> factors = new ArrayList<>();
-        for (int candidate = 2; candidate <= number; candidate++) {
-            while (number % candidate == 0) {
-                factors.add(candidate);
-                number = number / candidate;
+        List<Integer> primeFactors = new ArrayList<>();
+        for (int divisor = 2; divisor <= number; divisor++) {
+            while (number % divisor == 0) {
+                primeFactors.add(divisor);
+                number = number / divisor;
             }
         }
-        return factors;
+        return primeFactors;
     }
 }

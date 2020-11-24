@@ -9,12 +9,13 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 /**
  * @author huisheng.jin
- * @date 2020/11/22.
+ * @date 2020/11/24.
  */
 public class PrimeFactorTest {
+
     @Test
     void should_be_empty_when_parse_1() {
-        assertThat(PrimeFactor.parse(1)).isEqualTo(new ArrayList<Integer>());
+        assertThat(PrimeFactor.parse(1)).isEqualTo(new ArrayList<>());
     }
 
     @Test
@@ -48,12 +49,12 @@ public class PrimeFactorTest {
     }
 
     @Test
-    void should_be_2_and_2_and_3_and_5_when_parse_60() {
+    void should_be_right_when_parse_60() {
         assertThat(PrimeFactor.parse(60)).isEqualTo(Arrays.asList(2, 2, 3, 5));
     }
 
     @Test
-    void should_be_2_and_2_and_3_and_5_and_7_when_parse_420() {
+    void should_be_right_when_parse_420() {
         assertThat(PrimeFactor.parse(420)).isEqualTo(Arrays.asList(2, 2, 3, 5, 7));
     }
 
